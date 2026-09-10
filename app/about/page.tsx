@@ -14,8 +14,7 @@ export default function AboutPage() {
             About Me
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed mb-16">
-            A short powerful introduction about who you are goes here.
-            Example: I’m a developer passionate about building clean, useful,
+            I’m a developer passionate about building clean, useful,
             and meaningful digital experiences.
           </p>
 
@@ -24,13 +23,10 @@ export default function AboutPage() {
               <h2 className="text-2xl font-semibold mb-4">Who I Am</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Write 2–4 paragraphs about yourself here. Talk about your
-                  background, what drives you, and how you got into programming
-                  or your field.
+                  You will know soon.
                 </p>
                 <p>
-                  You can also mention your current focus, what you’re learning,
-                  or what kind of work you enjoy the most.
+                  Be patient
                 </p>
               </div>
             </div>
@@ -38,8 +34,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">What I Do</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Describe the kind of work you do or want to do.
-                Example: I build web applications with modern tools,
+                I build web applications with modern tools,
                 focus on clean code, and care about user experience.
               </p>
             </div>
@@ -70,8 +65,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">Beyond Code</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Share a bit about your interests outside of programming —
-                books, music, sports, learning, or anything that makes you human.
+                Programming, books, music, sports, and learning.
               </p>
             </div>
           </div>

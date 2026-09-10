@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Personal Portfolio",
     description:
-      "A modern personal portfolio built with Next.js, TypeScript, Tailwind CSS and shadcn/ui. Features dark mode, protected content, and clean design.",
+      "A modern personal portfolio. Features dark mode, protected content, and clean design.",
     category: "Web",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     year: "2026",
@@ -55,11 +55,10 @@ export default function ProjectsFilter() {
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`px-4 py-1.5 text-sm rounded-full border transition-colors ${
-              active === cat
-                ? "bg-primary text-primary-foreground border-primary"
-                : "bg-background hover:bg-secondary"
-            }`}
+            className={`px-4 py-1.5 text-sm rounded-full border transition-colors ${active === cat
+              ? "bg-primary text-primary-foreground border-primary"
+              : "bg-background hover:bg-secondary"
+              }`}
           >
             {cat}
           </button>
