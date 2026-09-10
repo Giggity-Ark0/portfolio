@@ -18,7 +18,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center justify-between">
         <Link href="/" className="font-semibold tracking-tight text-lg">
-          Your Name
+          Shanit Saha Arko
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm">
