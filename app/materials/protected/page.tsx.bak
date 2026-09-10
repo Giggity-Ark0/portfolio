@@ -1,0 +1,48 @@
+import { Metadata } from "next";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "Protected Notes",
+  description: "Login-required learning notes.",
+};
+
+export default function ProtectedNotesPage() {
+  return (
+    <div className="min-h-[calc(100vh-8rem)]">
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold tracking-tight mb-4">Protected Notes</h1>
+
+          <SignedOut>
+            <div className="rounded-xl border bg-card p-8 text-center space-y-6">
+              <p className="text-muted-foreground">
+                You need to sign in to view the protected notes.
+              </p>
+              <SignInButton mode="modal">
+                <Button size="lg">Sign In to Continue</Button>
+              </SignInButton>
+            </div>
+          </SignedOut>
+
+          <SignedIn>
+            <div className="flex items-center justify-between mb-8">
+              <p className="text-muted-foreground">
+                You are signed in. Protected content will appear here.
+              </p>
+              <UserButton afterSignOutUrl="/" />
+            </div>
+
+            <div className="rounded-xl border bg-card p-8 text-center">
+              <p className="text-muted-foreground">
+                Your protected content (C Programming Notes, etc.) will appear here.
+                <br />
+                We will add the secure viewer in the next phase.
+              </p>
+            </div>
+          </SignedIn>
+        </div>
+      </section>
+    </div>
+  );
+}

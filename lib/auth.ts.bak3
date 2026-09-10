@@ -1,0 +1,55 @@
+import { jwtVerify, createRemoteJWKSet } from "jose";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+
+const JWKS = createRemoteJWKSet(new URL(process.env.CLERK_JWKS_URL!));
+
+interface AuthResult {
+  userId: string | null;
+  sessionId: string | null;
+  orgId: string | null;
+  orgRole: string | null;
+  redirectToSignIn: (opts?: { returnBackUrl?: string }) => never;
+}
+
+export async function auth(): Promise<AuthResult> {
+  const hdrs = await headers();
+  const token = hdrs.get("x-clerk-auth-token");
+  const status = hdrs.get("x-clerk-auth-status");
+
+  let userId: string | null = null;
+  let sessionId: string | null = null;
+  let orgId: string | null = null;
+  let orgRole: string | null = null;
+
+  if (status === "signed-in" && token) {
+    try {
+      const { payload } = await jwtVerify(token, JWKS, { algorithms: ["RS256"] });
+      userId = (payload.sub as string) ?? null;
+      sessionId = (payload.sid as string) ?? null;
+      orgId = (payload.org_id as string) ?? null;
+      orgRole = (payload.org_role as string) ?? null;
+    } catch {
+      // invalid/expired token -> treat as signed out
+    }
+  }
+
+  return {
+    userId,
+    sessionId,
+    orgId,
+    orgRole,
+    redirectToSignIn: (opts) => {
+      const returnBackUrl = opts?.returnBackUrl ?? "";
+      redirect(`/sign-in?redirect_url=${encodeURIComponent(returnBackUrl)}`);
+    },
+  };
+}
+
+auth.protect = async function protect() {
+  const result = await auth();
+  if (!result.userId) {
+    result.redirectToSignIn();
+  }
+  return result;
+};

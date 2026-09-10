@@ -1,0 +1,10 @@
+// Temporary: middleware disabled due to Clerk + vinext compatibility issue
+// We will re-enable proper protection later
+
+export default function middleware() {
+  // empty for now
+}
+
+export const config = {
+  matcher: [],
+};
