@@ -2,39 +2,57 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Journey",
-  description: "My learning journey, progress, and growth over time.",
+  description: "The learning journey and key milestones of Shanit Saha Arko.",
 };
 
 const journeyData = [
   {
+    year: "2011",
+    title: "First Computer",
+    description:
+      "I was five when my father brought home my first computer — a well-configured machine for its time. I mostly explored games (GTA: Vice City, Road Rash, The House of the Dead, NFS Underground 2, NFS Most Wanted, GTA: San Andreas) and learned the joy of interacting with a computer for the first time.",
+  },
+  {
+    year: "2015",
+    title: "First Practical Tools",
+    description:
+      "I started using productivity software like Microsoft Excel and Word, explored the internet more deeply, tried basic video editing, and learned file and storage management.",
+  },
+  {
+    year: "2018",
+    title: "Getting Technical",
+    description:
+      "My curiosity grew into a deeper interest in how computers work — I learned about hardware components, assembly and configuration, and did some basic terminal work.",
+  },
+  {
     year: "2024",
     title: "Started Learning Programming",
     description:
-      "Began my journey into programming. Focused on fundamentals and building a strong foundation.",
+      "I began studying C, HTML, and command-line tools, learning core programming concepts and how to think like a developer.",
   },
   {
-    year: "2025",
-    title: "Deep Dive into C Programming",
+    year: "2024–2026",
+    title: "Deep Dive into C",
     description:
-      "Spent significant time mastering C. Created detailed notes and solved many problems to strengthen problem-solving skills.",
+      "I strengthened my foundation in C, practiced problem solving, and became more comfortable with low-level programming and debugging.",
   },
   {
-    year: "2025",
+    year: "2025–2026",
     title: "Explored Web Development",
     description:
-      "Started learning modern web technologies including HTML, CSS, JavaScript, and later moved into React and Next.js.",
+      "I built simple websites and presentation pages, learning HTML, CSS, and basic JavaScript while creating a website for a math presentation.",
   },
   {
     year: "2026",
     title: "Building Real Projects",
     description:
-      "Started creating full projects and this personal portfolio to showcase my work and learning progress.",
+      "I combined hardware and software skills to create projects like the Smart Environment Guardian System (Arduino) and the SRMS project, and launched my personal website.",
   },
   {
     year: "Present",
     title: "Continuing to Grow",
     description:
-      "Currently focused on improving skills, building better projects, and sharing knowledge through notes and resources.",
+      "I’m diving deeper into artificial intelligence and quantum computing, expanding my skills across embedded systems, full-stack work, and creative tools while working on more projects.",
   },
 ];
 

@@ -6,38 +6,62 @@ const projects = [
   {
     title: "Personal Portfolio",
     description:
-      "A modern personal portfolio built. Features dark mode, protected content, and clean design.",
+      "A modern, responsive personal website built to showcase my projects and writing. Features dark mode, protected content, clean design, and performance-focused code.",
     category: "Web",
-    tags: ["upcoming", "upcoming", "upcoming"],
+    tags: ["Next.js", "TypeScript", "Tailwind"],
     year: "2026",
+  },
+  {
+    title: "Smart Environment Guardian System",
+    description:
+      "An Arduino-based prototype that monitors environmental parameters (temperature, humidity, light) and triggers actuators or alerts when thresholds are crossed. Combines sensor interfacing, control logic, and data logging.",
+    category: "Hardware",
+    tags: ["Arduino", "Embedded", "C"],
+    year: "2026",
+  },
+  {
+    title: "SRMS Project",
+    description:
+      "A collaborative project built primarily with C and terminal tools. Contributed to planning, implementation, and testing while strengthening teamwork and problem-solving skills.",
+    category: "Team",
+    tags: ["C", "Terminal"],
+    year: "2026",
+  },
+  {
+    title: "Math Presentation Website",
+    description:
+      "A focused website created to present mathematical concepts and visualizations for a class presentation, emphasizing clarity, interactive examples, and accessible layout.",
+    category: "Web",
+    tags: ["HTML", "CSS", "JavaScript"],
+    year: "2025",
   },
   {
     title: "C Programming Notes",
     description:
-      "Comprehensive and well-structured notes covering C programming fundamentals, pointers, memory management, and data structures.",
-    category: "Notes",
-    tags: ["C", "Education"],
-    year: "2025",
+      "A thorough, organized collection of notes covering C fundamentals, pointers, memory management, and basic data structures — intended as a study resource and quick reference.",
+    category: "Education",
+    tags: ["C", "Documentation"],
+    year: "2026",
   },
   {
-    title: "Problem Solving Practice",
+    title: "Problem Solving Collection",
     description:
-      "Collection of solved programming problems focused on improving logic, algorithms, and clean coding habits.",
+      "A curated set of solved programming problems used to improve logic, algorithmic thinking, and coding style; includes explanations and clean implementations.",
     category: "Practice",
-    tags: ["Algorithms", "C"],
-    year: "2025",
+    tags: ["Algorithms", "Data Structures"],
+    year: "2025–2026",
   },
   {
     title: "Learning Tracker",
     description:
-      "A simple system to track daily learning progress, milestones, and consistency over time.",
+      "A small app to log daily learning activities, visualize streaks, and track milestones to maintain consistent progress over time.",
     category: "Tool",
-    tags: ["Productivity"],
+    tags: ["Productivity", "JavaScript"],
     year: "2026",
   },
 ];
 
-const categories = ["All", "Web", "Notes", "Practice", "Tool"];
+const categories = ["All", "Web", "Hardware", "Team", "Education", "Practice", "Tool"];
 
 export default function ProjectsPage() {
   const [active, setActive] = useState("All");
@@ -65,10 +89,11 @@ export default function ProjectsPage() {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`px-4 py-1.5 text-sm rounded-full border transition-all ${active === cat
-                ? "bg-primary text-primary-foreground border-primary"
-                : "bg-background hover:bg-secondary border-border"
-                }`}
+              className={`px-4 py-1.5 text-sm rounded-full border transition-all ${
+                active === cat
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-background hover:bg-secondary border-border"
+              }`}
             >
               {cat}
             </button>

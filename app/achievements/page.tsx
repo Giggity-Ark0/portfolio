@@ -2,37 +2,65 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Achievements",
-  description: "Key milestones, accomplishments, and recognitions along my journey.",
+  description: "Key milestones and accomplishments of Shanit Saha Arko.",
 };
 
 const achievements = [
   {
+    title: "Started Learning Programming",
+    description:
+      "Began formal programming study with C and command-line tools, developing core concepts like variables, control flow, and debugging.",
+    year: "2024",
+    category: "Learning",
+  },
+  {
     title: "Mastered C Programming Fundamentals",
     description:
-      "Completed an intensive self-study of C programming, including pointers, memory management, and data structures. Created comprehensive personal notes.",
+      "Solidified knowledge of C through practice and problem solving, gaining confidence in low-level programming, memory concepts, and structured programming techniques.",
+    year: "2025",
+    category: "Learning",
+  },
+  {
+    title: "Explored Web Development",
+    description:
+      "Built simple websites and presentation pages using HTML, CSS, and basic JavaScript, including a dedicated site for a math presentation.",
     year: "2025",
     category: "Learning",
   },
   {
     title: "Built Personal Portfolio",
     description:
-      "Designed and developed a modern, full-featured personal portfolio using Next.js, TypeScript, and Tailwind CSS with authentication and protected content.",
+      "Designed and launched a modern personal website featuring dark mode, clean design, and a structured way to showcase projects and learning journey.",
     year: "2026",
     category: "Project",
   },
   {
-    title: "Consistent Daily Practice",
+    title: "Smart Environment Guardian System",
     description:
-      "Maintained a strong habit of daily coding and problem-solving to build discipline and improve problem-solving speed.",
-    year: "2025 – Present",
-    category: "Habit",
+      "Designed and prototyped an Arduino-based system that monitors environmental parameters and responds with actuations — combining hardware and software skills.",
+    year: "2026",
+    category: "Hardware",
   },
   {
-    title: "Created Structured Learning Notes",
+    title: "SRMS Project",
     description:
-      "Organized detailed, high-quality notes on C programming that will later be shared as protected educational resources.",
-    year: "2025",
-    category: "Knowledge Sharing",
+      "Contributed to the SRMS project, strengthening teamwork, project planning, and practical problem-solving abilities.",
+    year: "2026",
+    category: "Team Project",
+  },
+  {
+    title: "C Programming Notes",
+    description:
+      "Created comprehensive, well-structured notes covering C fundamentals, pointers, memory management, and basic data structures.",
+    year: "2026",
+    category: "Education",
+  },
+  {
+    title: "Exploring AI & Quantum Computing",
+    description:
+      "Actively studying artificial intelligence fundamentals and introductory quantum computing concepts while experimenting with small models and simulations.",
+    year: "2026 – Present",
+    category: "Research",
   },
 ];
 
