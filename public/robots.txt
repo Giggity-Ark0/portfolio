@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.arko-main-2026.workers.dev/sitemap.xml
