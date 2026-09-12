@@ -1,9 +1,6 @@
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Journey",
-  description: "The learning journey and key milestones of Shanit Saha Arko.",
-};
+import FadeIn from "@/components/FadeIn";
 
 const journeyData = [
   {
@@ -61,25 +58,31 @@ export default function JourneyPage() {
     <div className="min-h-[calc(100vh-8rem)]">
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            My Journey
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            A timeline of my learning path, key milestones, and continuous growth.
-          </p>
+          <FadeIn>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+              My Journey
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              A timeline of my learning path, key milestones, and continuous growth.
+            </p>
+          </FadeIn>
         </div>
 
         <div className="max-w-2xl mx-auto">
           <div className="relative border-l border-border ml-3 space-y-12">
             {journeyData.map((item, index) => (
-              <div key={index} className="relative pl-10">
-                <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background" />
-                <span className="text-sm font-medium text-primary">{item.year}</span>
-                <h3 className="text-xl font-semibold mt-1 mb-2">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+              <FadeIn key={index} delay={0.05 * index}>
+                <div className="relative pl-10">
+                  <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-background" />
+                  <span className="text-sm font-medium text-primary">{item.year}</span>
+                  <h3 className="text-xl font-semibold mt-1 mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </FadeIn>
             ))}
           </div>
         </div>

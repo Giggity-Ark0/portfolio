@@ -3,6 +3,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import PageTransition from "@/components/PageTransition";
+import AtmosphericBackground from "@/components/AtmosphericBackground";
+import CursorAtmosphere from "@/components/CursorAtmosphere";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -61,8 +63,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <AtmosphericBackground />
+          <CursorAtmosphere />
           <Navbar />
-          <main className="flex-1">
+          <main className="flex-1 relative z-10">
             <PageTransition>{children}</PageTransition>
           </main>
           <Footer />
